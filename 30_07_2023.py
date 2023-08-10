@@ -27,34 +27,34 @@
 #     n = len(arr)
 #     secondmax(arr,n)
 
-def binarysearch(arr, x, left, right):
-    count = 0
+# def binarysearch(arr, x, left, right):
+#     count = 0
     
-    while left <= right:  # Change the condition to handle the case when left == right
-        mid = (left + right) // 2
+#     while left <= right: 
+#         mid = (left + right) // 2
 
-        if arr[mid] == x:
-            count += 1
-            # Check the elements to the right of mid
-            i = mid + 1
-            while i <= right and arr[i] == x:
-                count += 1
-                i += 1
+#         if arr[mid] == x:
+#             count += 1
+            
+#             i = mid + 1
+#             while i <= right and arr[i] == x:
+#                 count += 1
+#                 i += 1
 
-            # Check the elements to the left of mid
-            i = mid - 1
-            while i >= left and arr[i] == x:
-                count += 1
-                i -= 1
+#             i = mid - 1
+#             while i >= left and arr[i] == x:
+#                 count += 1
+#                 i -= 1
 
-            break  # We have found all occurrences of x, so break out of the loop
-        elif arr[mid] > x:
-            right = mid - 1
-        else:
-            left = mid + 1
+#             break  
+#         elif arr[mid] > x:
+#             right = mid - 1
+#         else:
+#             left = mid + 1
 
-    return count
+#     return count
 
-arr = [1, 2, 3, 4, 5, 6, 6, 6,6, 8, 9]
-print(binarysearch(arr, 6, 0, len(arr) - 1))
+# arr = [1, 2, 3, 4, 5, 6, 6, 6,6, 8, 9]
+# print(binarysearch(arr, 6, 0, len(arr) - 1))
+
 
