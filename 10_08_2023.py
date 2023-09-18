@@ -18,7 +18,7 @@
 #     for item in values:
 #         ans += item
 #     ans = ans/length
-#     print("{:.2f}".format(ans)) ## {::.2f}.format it is used to format the answer for 2 decimal places
+#     print("{:.2f}".format(ans)) ## {:.2f}.format it is used to format the answer for 2 decimal places
 
 
 # def swap_case(s):
@@ -34,7 +34,7 @@
 # if __name__ == '__main__':
 #     s = input()
 #     result = swap_case(s)
-#     # print(result)
+#     print(result)
 
 ### Find the occurence of the substring in the string
 
