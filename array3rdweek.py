@@ -18,7 +18,7 @@
 #     for i in range(len(arr)):
 #         if arr[i] > maximum:
 #             maximum = arr[i]
-#         if arr[i] < minimum:
+#         if arr[i] < minimum:                        
 #             minimum = arr[i]
 
 #     return maximum,minimum
@@ -130,6 +130,40 @@
 # arr2 = [3,4]
 # print(union_intersection(arr1,arr2))
 
+# def union_intersection(arr1,arr2):
+#     i,j = 0, 0
+#     union = []
+#     intersection = []
+#     while i < len(arr1) and j < len(arr2):
+#         if arr1[i] < arr2[j]:
+#             union.append(arr1[i])
+#             i += 1
+#         elif arr1[i] > arr2[j]:
+#             union.append(arr2[j])
+#             j += 1
+#         elif arr1[i] == arr2[j]:
+#             union.append(arr1[i])
+#             i += 1
+#             j += 1
+
+#     while i < len(arr1):
+#         union.append(arr1[i])
+#         i += 1
+#     while j < len(arr2):
+#         union.append(arr2[j])
+#         j += 1 
+
+#     for i in range(len(arr2)):
+#         for j in range(len(arr1)):
+#             if arr2[i] == arr1[j]:
+#                 intersection.append(arr2[i])
+#     return union,intersection
+
+
+# arr1 = [1,2,3,4,5,8]
+# arr2 = [3,4]
+# print(union_intersection(arr1,arr2))
+
 
 ### Maximum sum of subarray using kaden's algorithm
 
@@ -176,9 +210,8 @@
 # def duplicates(arr):
 #     for i in range(len(arr)):
 #         num = abs(arr[i])
-#         if arr[num] >= 0:
-#             arr[num] = -arr[num]
-#         else:
+#         if arr[num] < 0:
 #             print(num)
-# arr = [1,2,3,3,4]
+#         arr[num] = -arr[num]
+# arr = [1,2,3,3,4,4]
 # duplicates(arr)
